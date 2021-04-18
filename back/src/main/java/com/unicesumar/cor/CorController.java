@@ -33,7 +33,7 @@ public class CorController {
 	
 	@GetMapping("/{idParaEditar}")
 	public Cor getById(@PathVariable("idParaEditar") String idParaEditar) {
-		return this.cores.stream().filter(c -> c.getId().equals(idParaEditar)).findFirst().orElseGet(Cor::new);
+		return this.cores.stream().filter(cor -> cor.getId().equals(idParaEditar)).findFirst().orElseGet(Cor::new);
 	}
 
 	@PutMapping("/{id}")

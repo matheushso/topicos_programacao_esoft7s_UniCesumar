@@ -9,6 +9,7 @@ import CorList from './components/cor/cor-list';
 import LandingPage from './components/landing/landing-page';
 import ReactDOM from "react-dom";
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import LivroList from './components/livro/livro-list';
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route exact path="/cores">
             <CorList></CorList>
+          </Route>
+          <Route exact path="/livros">
+            <LivroList></LivroList>
           </Route>
           <Route path="/cores/editar/:idParaEditar">
             <CorEdit></CorEdit>
