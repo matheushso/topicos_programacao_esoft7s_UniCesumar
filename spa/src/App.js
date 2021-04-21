@@ -10,6 +10,8 @@ import LandingPage from './components/landing/landing-page';
 import ReactDOM from "react-dom";
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import LivroList from './components/livro/livro-list';
+import ProdutoList from './components/produto/produto-list';
+import ProdutoEdit from './components/produto/produto-edit';
 
 function App() {
 
@@ -31,6 +33,15 @@ function App() {
           </Route>
           <Route path="/cores/nova">
             <CorEdit></CorEdit>
+          </Route>
+          <Route exact path="/produtos">
+            <ProdutoList></ProdutoList>
+          </Route>
+          <Route exact path="/produtos/editar/:idParaEditar">
+            <ProdutoEdit></ProdutoEdit>
+          </Route>
+          <Route exact path="/produtos/novo">
+            <ProdutoEdit></ProdutoEdit>
           </Route>
         </Switch>
       </Router>
