@@ -10,6 +10,7 @@ import LandingPage from './components/landing/landing-page';
 import ReactDOM from "react-dom";
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import LivroList from './components/livro/livro-list';
+import LivroEdit from './components/livro/livro-edit';
 import ProdutoList from './components/produto/produto-list';
 import ProdutoEdit from './components/produto/produto-edit';
 
@@ -25,14 +26,20 @@ function App() {
           <Route exact path="/cores">
             <CorList></CorList>
           </Route>
-          <Route exact path="/livros">
-            <LivroList></LivroList>
-          </Route>
           <Route path="/cores/editar/:idParaEditar">
             <CorEdit></CorEdit>
           </Route>
           <Route path="/cores/nova">
             <CorEdit></CorEdit>
+          </Route>
+          <Route exact path="/livros">
+            <LivroList></LivroList>
+          </Route>
+          <Route exact path="/livros/editar/:idParaEditar">
+            <LivroEdit></LivroEdit>
+          </Route>
+          <Route exact path="/livros/novo">
+            <LivroEdit></LivroEdit>
           </Route>
           <Route exact path="/produtos">
             <ProdutoList></ProdutoList>
