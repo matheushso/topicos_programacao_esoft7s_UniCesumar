@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useHistory, useParams } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
 
 const ProdutoEdit = () => {
 
@@ -62,6 +62,9 @@ const ProdutoEdit = () => {
                     <input type="text" name="precoUnitario" onChange={handleChange}></input>
                 </div>
                 <button>Enviar</button>
+                <Link to="/cores">
+                    Voltar
+                </Link>
             </form>
         </div>
     )
